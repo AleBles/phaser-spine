@@ -28,23 +28,23 @@
         game.plugins.add(Fabrique.Plugins.Spine);
         game.stage.disableVisibilityChange = true;
 
-        game.load.spine('buddy', "buddy_skeleton.json");
+        game.load.spine('royletron', "royletron_skeleton.json");
     }
 
     function create() {
 
         //create the spine object
-        buddy = game.add.spine(400, 300, "buddy");
+        royletron = game.add.spine(400, 300, "royletron");
 
         // play animation
-        buddy.setAnimationByName(0, "idle", true);
+        royletron.setAnimationByName(0, "idle", true);
 
     }
     var t = Date.now();
     var s = 1;
     function update() {
         if ((Date.now() - t) / 1000 > 2) {
-            buddy.setSkinByName('outfit0' + s);
+            royletron.setSkinByName('0000' + s);
             t = Date.now();
             s ++;
             if (s === 3) s = 1;
