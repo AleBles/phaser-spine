@@ -38,6 +38,7 @@
 
         // play animation
         royletron.setAnimationByName(0, "idle", true);
+        royletron.setToSetupPose();
 
     }
     var t = Date.now();
@@ -45,6 +46,7 @@
     function update() {
         if ((Date.now() - t) / 1000 > 2) {
             royletron.setSkinByName('0000' + s);
+            royletron.setToSetupPose();
             t = Date.now();
             s ++;
             if (s === 3) s = 1;
